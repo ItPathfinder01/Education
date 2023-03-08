@@ -60,10 +60,6 @@ Task4
 ''')
 
 
-def student(name, s_class):
-    return (name, s_class)
-
-
 print(student("Nata", 7))
 new_student = student("Pasha", 6)
 print(new_student)
