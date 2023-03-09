@@ -16,3 +16,4 @@ def destination_setup(origin, destination, estimated_time,mode_of_transport = "C
   print("It will take approximately ",str(estimated_time),"hours")
 
 destination_setup( "Minsk", "Lodz", estimate, "Train" )
+
