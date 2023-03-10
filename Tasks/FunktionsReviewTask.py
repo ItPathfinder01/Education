@@ -17,3 +17,15 @@ def destination_setup(origin, destination, estimated_time,mode_of_transport = "C
 
 destination_setup( "Minsk", "Lodz", estimate, "Train" )
 
+time = "3pm"
+mood = "good"
+
+
+def report():
+    print("The current time is " + time)
+    print("The mood is " + mood)
+
+
+print("Beginning of report")
+
+report()
