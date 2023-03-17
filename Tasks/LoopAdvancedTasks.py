@@ -53,3 +53,14 @@ def same_values(lst1, lst2):
   return new_lst
 
 print(same_values([5, 1, -10, 3, 3], [5, 10, -10, 3, 5]))
+
+# Task 5
+
+def reversed_list(lst1, lst2):
+    if lst1 == list(reversed(lst2)):
+        return True
+    return False
+
+print(reversed_list([1, 2, 3], [3, 2, 1]))
+print(reversed_list([1, 5, 3], [3, 2, 1]))
+
