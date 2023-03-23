@@ -30,3 +30,29 @@ fixed_first_name = "R" + first_name[1:]
 print(fixed_first_name)
 fixed_last_name = "K" + last_name[1:]
 print(fixed_last_name)
+
+# Task 4
+
+def get_length(word):
+  counter = 0
+  for figure in word:
+    counter += 1
+  return counter
+
+
+print(get_length("SdohniPutin"))
+
+# Task 5
+
+def common_letters(string_one, string_two):
+  common_list = []
+  for letter in string_one:
+    if letter in string_two and not letter in common_list:
+      common_list.append(letter)
+  return common_list
+
+
+print(common_letters("manhattan", "san francisco"))
+
+
+
