@@ -104,3 +104,29 @@ for line in love_maybe_lines:
 love_maybe_full = '\n'.join(love_maybe_lines_stripped)
 
 print(love_maybe_full)
+
+# Task 8
+# replace - принимает два параметра и меняет первый на второй (можно использовать для замены в тексте)
+toomer_bio = \
+"""
+Nathan Pinchback Tomer, who adopted the name Jean Tomer early in his literary career, was born in Washington, D.C. in 1894. Jean is the son of Nathan Tomer was a mixed-race freedman, born into slavery in 1839 in Chatham County, North Carolina. Jean Tomer is most well known for his first book Cane, which vividly portrays the life of African-Americans in southern farmlands.
+"""
+
+toomer_bio_fixed = toomer_bio.replace("Tomer", "Toomer")
+print (toomer_bio_fixed)
+
+# Task 9
+
+the_list = ["a","b","c","d","e","f","j"]
+if "w" in the_list:
+  print("It is there")
+else:
+  print("It is not there")
+
+# Task 10
+#find() - поиск индекса первого вхождения элемента в списке
+god_wills_it_line_one = "The very earth will disown you"
+
+disown_placement = "The very earth will disown you".find("disown")
+print (disown_placement)
+
