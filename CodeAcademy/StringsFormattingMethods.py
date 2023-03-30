@@ -130,3 +130,29 @@ god_wills_it_line_one = "The very earth will disown you"
 disown_placement = "The very earth will disown you".find("disown")
 print (disown_placement)
 
+# Task 11
+# format() - это метод строк в Python, который позволяет вставлять значения переменных внутрь строки. Он возвращает новую строку, которая является копией исходной строки с замененными значениями переменных.
+def poem_title_card(title, poet):
+  return "The poem \"{}\" is written by {}.".format(title, poet)
+
+
+print(poem_title_card("I Hear America Singing", "Walt Whitman"))
+
+# Task 12
+
+def poem_description(publishing_date, author, title, original_work):
+  poem_desc = "The poem {title} by {author} was originally published in {original_work} in {publishing_date}.".format(title = title, author = author, original_work = original_work, publishing_date = publishing_date )
+  return poem_desc
+
+author = "Shel Silverstein"
+title = "My Beard"
+original_work = "Where the Sidewalk Ends"
+publishing_date = "1974"
+
+my_beard_description = poem_description(publishing_date, author, title, original_work)
+print(my_beard_description)
+
+# Task 13
+
+
+
