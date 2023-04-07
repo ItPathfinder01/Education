@@ -54,5 +54,24 @@ def common_letters(string_one, string_two):
 
 print(common_letters("manhattan", "san francisco"))
 
+# Task 6
+
+def username_generator(first_name, last_name):
+  username = first_name[:3] + last_name[:4]
+  if len(first_name) < 3 or len(last_name) < 4:
+    return last_name + first_name
+  return username
+
+print(username_generator("Ab", "Simpson"))
+
+def password_generator(user_name):
+  password = ""
+  for index in range(0, len(user_name)):
+     password += user_name[index-1]
+  return password
+
+print(password_generator("Tania"))
+
+
 
 

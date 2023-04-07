@@ -11,7 +11,7 @@ print(num_cameras)
 translations = { "mountain": "orod", "bread": "bass", "friend": "mellon", "horse": "roch" }
 
 # Task 3
-
+# Adding new stuff or editing xisting
 animals_in_zoo = {}
 
 animals_in_zoo["zebras"] = 8
@@ -65,6 +65,15 @@ plays["Respect"] = 94
 library ={"The Best Songs": plays, "Sunday Feelings": {} }
 
 print(library)
+
+# Task 8
+# Getting dictionary value by it's key
+zodiac_elements = {"water": ["Cancer", "Scorpio", "Pisces"], "fire": ["Aries", "Leo", "Sagittarius"], "earth": ["Taurus", "Virgo", "Capricorn"], "air":["Gemini", "Libra", "Aquarius"]}
+
+print(zodiac_elements["earth"])
+print(zodiac_elements["fire"])
+
+
 
 
 
