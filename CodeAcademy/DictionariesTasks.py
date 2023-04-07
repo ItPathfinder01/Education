@@ -39,7 +39,7 @@ oscar_winners["Best Picture"] = "Moonlight"
 
 # Task 6
 
-rinks = ["espresso", "chai", "decaf", "drip"]
+drinks = ["espresso", "chai", "decaf", "drip"]
 caffeine = [64, 40, 0, 120]
 
 zipped_drinks = zip(drinks, caffeine)
@@ -47,6 +47,26 @@ zipped_drinks = zip(drinks, caffeine)
 drinks_to_caffeine = {drinks:caffeine for drinks, caffeine in zip(drinks, caffeine)}
 
 print(drinks_to_caffeine)
+
+# Task 7
+
+songs = ["Like a Rolling Stone", "Satisfaction", "Imagine", "What's Going On", "Respect", "Good Vibrations"]
+playcounts = [78, 29, 44, 21, 89, 5]
+
+zipped = zip(songs, playcounts)
+
+plays = {songs: playcounts for songs, playcounts  in zip(songs, playcounts) }
+
+plays["Purple Haze"] = 1
+plays["Respect"] = 94
+
+# print(plays)
+
+library ={"The Best Songs": plays, "Sunday Feelings": {} }
+
+print(library)
+
+
 
 
 
