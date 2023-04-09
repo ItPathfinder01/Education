@@ -106,3 +106,36 @@ health_points += available_items.pop("mystic bread", 0)
 print(available_items)
 print(health_points)
 
+# Task 12
+# Getting the keys of the dictionary via Keys() function
+user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931, "keysmithKeith": 129384}
+num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
+
+for users in user_ids.keys():
+  print(users)
+
+users = user_ids.keys()
+lessons = num_exercises.keys()
+
+print(users)
+print(lessons)
+
+# Task 13
+# Get access to the values of dictionary via values() function
+num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
+
+total_exercises = 0
+
+for exercises in num_exercises.values():
+  total_exercises += exercises
+
+print(total_exercises)
+
+# Task 14
+# Get access to the keys and values of dictionary via items() function
+pct_women_in_occupation = {"CEO": 28, "Engineering Manager": 9, "Pharmacist": 58, "Physician": 40, "Lawyer": 37, "Aerospace Engineer": 9}
+
+for job, number in pct_women_in_occupation.items():
+  print ("Women make up " + str(number) + " percent of " + str(job) )
+
+
