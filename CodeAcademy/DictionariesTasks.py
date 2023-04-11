@@ -85,7 +85,7 @@ if key_to_check in zodiac_elements:
     print(zodiac_elements["energy"])
 
 # Task 10
-#get values from from dictionary. If the key or value doesn exist returns predifined value
+#get values from dictionary. If the key or value doesn exist returns predifined value
 user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931, "keysmithKeith": 129384}
 
 tc_id = user_ids.get("teraCoder", 100000)
