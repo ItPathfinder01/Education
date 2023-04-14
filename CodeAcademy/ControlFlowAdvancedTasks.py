@@ -73,3 +73,4 @@ print(max_num(-5, -10, -10))
 # should print -5
 print(max_num(2, 4, 4))
 # should print "It's a tie!"
+
