@@ -95,3 +95,22 @@ with open("message.json") as message_json:
 print(message["text"])
 
 # Task 10
+# Этот код создает файл с именем "data.json" и записывает в него список словарей, где каждый словарь представляет собой набор пар ключ-значение.
+#
+# Первый элемент каждого словаря представлен ключом "interesting message" и содержит строку, а второй элемент представлен ключом "follow up" и также содержит строку.
+#
+# Функция json.dump() используется для сериализации данных в формат JSON и записи их в файл "data.json".
+#
+# После записи данных в файл, выводится объект файла data_json. Однако, поскольку он был создан внутри контекстного менеджера with, он закрыт после выхода из блока with и не может быть использован после этого.
+#
+# Чтобы убедиться в том, что данные успешно записаны в файл, можно попытаться прочитать файл с помощью функции json.load() и вывести содержимое на экран.
+
+data_payload = [
+  {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+   'follow up': 'But enough talk!'}
+]
+
+import json
+with open("data.json", "w") as data_json:
+  json.dump(data_payload, data_json)
+print(data_payload)
