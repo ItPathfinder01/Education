@@ -85,7 +85,13 @@ with open("logger.csv", "w") as logger_csv:
   for element in access_log:
     log_writer.writerow(element)
 
+# Task 9
+# Этот код читает файл "message.json", используя библиотеку json для декодирования содержимого файла из формата JSON в структуру данных Python. Затем он выводит значение ключа "text" из загруженной структуры данных в переменную message.
+# Таким образом, данный код полезен, если вы хотите прочитать JSON-файл и получить доступ к его содержимому в вашей программе на Python. В данном случае он выводит значение текстового поля "text" из JSON-файла.
 
+import json
+with open("message.json") as message_json:
+  message = json.load(message_json)
+print(message["text"])
 
-
-
+# Task 10
