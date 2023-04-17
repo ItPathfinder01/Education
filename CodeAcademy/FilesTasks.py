@@ -58,3 +58,34 @@ with open("books.csv") as books_csv:
   for key in books_reader:
     isbn_list.append(key['ISBN'])
 print(isbn_list)
+
+# Task 8
+
+# Этот код выполняет запись данных из списка access_log в файл CSV с именем "logger.csv".
+#
+# Первая строка import csv импортирует модуль csv, который позволяет работать с CSV-файлами в Python.
+#
+# Вторая строка with open("logger.csv", "w") as logger_csv: открывает файл "logger.csv" в режиме записи и создает объект файла logger_csv. Ключевое слово with используется для автоматического закрытия файла после окончания работы с ним.
+#
+# Третья строка log_writer = csv.DictWriter(logger_csv, fieldnames = fields) создает объект log_writer для записи в CSV-файл, используя метод DictWriter из модуля csv. Этот метод принимает два аргумента: logger_csv, объект файла, и fieldnames, список имен полей (столбцов) в CSV-файле.
+#
+# Четвертая строка log_writer.writeheader() записывает заголовок (имена столбцов) в CSV-файл.
+#
+# Пятая строка for element in access_log: начинает итерацию по каждому элементу в списке access_log.
+#
+# Шестая строка log_writer.writerow(element) записывает каждый элемент в CSV-файл в виде строки, используя метод writerow из объекта log_writer. Каждый элемент должен быть словарем, где ключи словаря соответствуют именам полей (столбцов), определенных в fieldnames, а значения соответствуют значениям в каждой строке CSV-файла.
+
+'address': '172.1.254.208'}, {'time': '18:57:16', 'limit': 67031769, 'address': '172.58.247.219'}, {'time': '21:17:13', 'limit': 9083, 'address': '124.144.20.113'}, {'time': '23:34:17', 'limit': 65913, 'address': '203.236.149.220'}, {'time': '13:58:05', 'limit': 1541474, 'address': '192.52.206.76'}, {'time': '10:52:00', 'limit': 11465607, 'address': '104.47.149.93'}, {'time': '14:56:12', 'limit': 109, 'address': '192.31.185.7'}, {'time': '18:56:35', 'limit': 6207, 'address': '2.228.164.197'}]
+fields = ['time', 'address', 'limit']
+
+import csv
+with open("logger.csv", "w") as logger_csv:
+  log_writer = csv.DictWriter(logger_csv, fieldnames = fields)
+  log_writer.writeheader()
+  for element in access_log:
+    log_writer.writerow(element)
+
+
+
+
+
