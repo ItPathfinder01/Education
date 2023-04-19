@@ -17,6 +17,14 @@ with open("compromised_users.txt", "w") as compromised_user_file:
   for user in compromised_users:
     compromised_user_file.write(user)
 
+import json
+with open("boss_message.json", "w") as boss_message:
+  boss_message_dict = {
+    "recipient": "The Boss",
+    "message": "Mission Success"
+    }
+  json.dump(boss_message_dict, boss_message)
+
 
 
 
