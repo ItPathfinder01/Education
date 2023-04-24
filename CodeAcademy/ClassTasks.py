@@ -40,3 +40,33 @@ class Circle:
 
 
 teaching_table = Circle(36)
+
+# Task 5
+import random
+class HeroesStuff:
+  def __init__(self, power1, power2,  weakness):
+    self.power1 = power1
+    self.power2 = power2
+    self.weakness = weakness
+
+super_powers = ["Invisibility", "Super strength", "Telekinesis", "Flight", "X-ray vision", "Super speed", "Immortality"]
+super_weaknesses = ["Loud noise", "Kryptonite", "Water", "Fire", "Electricity", "Iron", "Light sun"]
+
+while True:
+    power1, power2 = random.sample(super_powers, 2)
+    if power1 != power2:
+        break
+
+super_ability = HeroesStuff(power1, power2, random.choice(super_weaknesses))
+print("Your first super power is " + super_ability.power1 + ", your second super power is " + super_ability.power2 + " and your weakness is " + super_ability.weakness)
+
+# Task 6
+# getattr() - это встроенная функция в Python, которая возвращает значение атрибута объекта по его имени. Она принимает два аргумента: объект и имя атрибута.
+# hasattr() - это встроенная функция в Python, которая проверяет, содержит ли объект атрибут с заданным именем. Она принимает два аргумента: объект и имя атрибута.
+can_we_count_it = [{'s': False}, "sassafrass", 18, ["a", "c", "s", "d", "s"]]
+
+for element in can_we_count_it:
+  if hasattr(element, "count"):
+    print(str(type(element)) + " has the count attribute!")
+  else:
+    print(str(type(element)) + " does not have the count attribute :(")
