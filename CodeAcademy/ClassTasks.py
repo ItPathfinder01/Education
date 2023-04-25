@@ -71,8 +71,18 @@ for element in can_we_count_it:
   else:
     print(str(type(element)) + " does not have the count attribute :(")
 
-# Task 7
-
+# # Task 7
+# Данный код определяет класс Circle, который имеет атрибут pi, равный 3.14, и методы __init__() и circumference().
+#
+# Метод __init__() используется для инициализации объекта класса Circle. Он принимает аргумент diameter - диаметр окружности, и вычисляет радиус окружности, деля диаметр на 2. Значение радиуса сохраняется в атрибут self.radius.
+#
+# Метод circumference() используется для вычисления длины окружности по заданному радиусу. Он использует значение pi из атрибута класса и радиус, хранящийся в атрибуте объекта self.radius.
+#
+# Далее в коде создаются три объекта класса Circle: medium_pizza, teaching_table, round_room, с диаметрами 12, 36 и 11460 соответственно.
+#
+# Затем вызываются методы circumference() для каждого из объектов класса Circle. Метод circumference() вычисляет длину окружности по формуле 2 * pi * r, где pi - это значение атрибута класса, а r - радиус объекта, хранящийся в атрибуте объекта self.radius.
+#
+# Таким образом, при вызове метода circumference() для каждого из объектов класса Circle, будет выведено значение длины окружности, вычисленное по соответствующей формуле, для каждого из объектов.
 class Circle:
   pi = 3.14
   def __init__(self, diameter):
@@ -91,3 +101,43 @@ print(medium_pizza.circumference())
 print(teaching_table.circumference())
 print(round_room.circumference())
 
+# Task 8
+# dir() - это встроенная функция языка Python, которая возвращает список имен, определенных в текущей локальной области видимости или атрибутов указанного объекта. Если вызвать без аргументов, она вернет список имен, определенных в текущей области видимости
+def this_function_is_an_object(anything):
+  return ("Hello")
+
+print(dir(this_function_is_an_object))
+
+# Task 9
+# __repr__ - это магический метод Python, который определяет строковое представление объекта. Этот метод вызывается, когда нужно получить строковое представление объекта, например, когда объект выводится на экран или когда его представляют в виде строки. Обычно строковое представление, возвращаемое методом __repr__, должно быть достаточно информативным, чтобы можно было понять, что это за объект, и в то же время не слишком длинным.
+class Circle:
+  pi = 3.14
+
+  def __init__(self, diameter):
+    self.radius = diameter / 2
+
+  def __repr__(self):
+    return "Circle with radius {radius}".format(radius=self.radius)
+
+  def area(self):
+    return self.pi * self.radius ** 2
+
+  def circumference(self):
+    return self.pi * 2 * self.radius
+
+
+medium_pizza = Circle(12)
+teaching_table = Circle(36)
+round_room = Circle(11460)
+
+print(medium_pizza)
+print(teaching_table)
+print(round_room)
+
+# Task 10
+# f - это префикс для строкового литерала (f-string) в Python, который используется для форматирования строк с использованием выражений Python внутри фигурных скобок. Этот синтаксис был введен в Python 3.6 и позволяет более удобно и читаемо вставлять значения переменных и выражений в строки.
+# Например, если у нас есть переменная name со значением "John" и переменная age со значением 30, мы можем использовать f-строку, чтобы вставить эти значения в строку:
+
+name = "John"
+age = 30
+print(f"My name is {name} and I'm {age} years old.")
