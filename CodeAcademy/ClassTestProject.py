@@ -7,6 +7,14 @@ class Menu:
 
   def __repr__(self):
     return (f"{self.name} menu is available from {self.start_time} till {self.end_time}.")
+
+  def calculate_bill(self, purchased_items):
+    bill = 0
+    for purchased_item in purchased_items:
+      if purchased_item in self.items:
+        bill += self.items[purchased_item]
+    return (f"The price of the meal is {bill}$.")
+
 # Brunch menu
 
 brunch_items = {
@@ -37,3 +45,5 @@ kids_items = {
 kids_menu = Menu("Kids", kids_items, 1100, 2100)
 
 print(dinner_menu)
+
+print(kids_menu.calculate_bill(["chicken nuggets","apple juice"]))
