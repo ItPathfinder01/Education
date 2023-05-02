@@ -76,3 +76,23 @@ print(check_for_name("My name is jamie", "Jamie"))
 # should print True
 print(check_for_name("My name is Samantha", "Jamie"))
 # should print False
+
+# Task 7
+
+def every_other_letter(word):
+  string =""
+  for letter in range(0, len(word),2):
+    string += word[letter]
+  return string
+
+
+
+
+print(every_other_letter("Codecademy"))
+# should print Cdcdm
+print(every_other_letter("Hello world!"))
+# should print Hlowrd
+print(every_other_letter(""))
+# should print
+
+# Task 8
