@@ -96,3 +96,41 @@ print(every_other_letter(""))
 # should print
 
 # Task 8
+def reverse_string(word):
+  reverse = ""
+  for letter in range(len(word)-1, -1, -1):
+    reverse += word[letter]
+  return reverse
+
+
+
+print(reverse_string("Codecademy"))
+# should print ymedacedoC
+print(reverse_string("Hello world!"))
+# should print !dlrow olleH
+print(reverse_string(""))
+# should print
+
+# Task 9
+def make_spoonerism(word1, word2):
+  return word2[0]+word1[1:]+" "+word1[0]+word2[1:]
+
+
+print(make_spoonerism("Codecademy", "Learn"))
+# should print Lodecademy Cearn
+print(make_spoonerism("Hello", "world!"))
+# should print wello Horld!
+print(make_spoonerism("a", "b"))
+# should print b a
+
+# Task 10
+def add_exclamation(word):
+  while (len(word) < 20):
+    word += ("!")
+  return word
+
+
+print(add_exclamation("Codecademy"))
+# should print Codecademy!!!!!!!!!!
+print(add_exclamation("Codecademy is the best place to learn"))
+# should print Codecademy is the best place to learn
