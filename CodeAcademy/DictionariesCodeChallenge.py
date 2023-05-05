@@ -71,3 +71,36 @@ print(max_key({1:100, 2:1, 3:4, 4:10}))
 # should print 1
 print(max_key({"a":100, "b":10, "c":1000}))
 # should print "c"
+
+# Task 6
+
+def word_length_dictionary(words):
+  word_lengths = {}
+  for word in words:
+    word_lengths[word] = len(word)
+  return word_lengths
+
+
+
+print(word_length_dictionary(["apple", "dog", "cat"]))
+# should print {"apple":5, "dog": 3, "cat":3}
+print(word_length_dictionary(["a", ""]))
+# should print {"a": 1, "": 0}
+
+# Task 7
+
+def frequency_dictionary(words):
+  word_number = {}
+  for word in words:
+    if word not in word_number:
+      word_number[word] = 0
+    word_number[word] += 1
+  return word_number
+
+
+print(frequency_dictionary(["apple", "apple", "cat", 1]))
+# should print {"apple":2, "cat":1, 1:1}
+print(frequency_dictionary([0, 0, 0, 0, 0]))
+# should print {0:5}
+
+# Task 8
