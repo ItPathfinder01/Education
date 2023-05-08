@@ -14,10 +14,15 @@ class Admin(Employee): # Inherited Employee method
     super().say_id()   # Super method allows to use the logic from Employee class
     print("I am an Admin")
 
+class Manager(Admin):  # Multiple inheritance: Admin inherits-Employee and then Manager inherits Admin
+  def say_id(self):
+    super().say_id()   # Super method allows to use the logic from Employee class
+    print("They are in charge")
+
 e1 = Employee()
 e2 = Employee()
-e3 = Employee()
-e4 = Admin()
+e3 =Admin()
+e4 = Manager()
 
 e1.say_id()
 e2.say_id()
