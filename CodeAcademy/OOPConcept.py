@@ -40,4 +40,33 @@ e1.say_id()
 e2.say_id()
 e3.say_user_info()
 
-# Task 2
+# Task 2 Plymorphism. Here objects of different classes are using the same method
+
+class Employee():
+  new_id = 1
+  def __init__(self):
+    self.id = Employee.new_id
+    Employee.new_id += 1
+
+  def say_id(self):
+    print("My id is {}.".format(self.id))
+
+class Admin(Employee):
+  def say_id(self):
+    super().say_id()
+    print("I am an admin.")
+
+class Manager(Admin):
+  def say_id(self):
+    super().say_id()
+    print("I am in charge!")
+
+user1 = Employee()
+user2 = Admin()
+user3 = Manager()
+
+meeting = [user1, user2, user3]
+
+for user in meeting:
+  user.say_id()
+
