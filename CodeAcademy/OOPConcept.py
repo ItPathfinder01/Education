@@ -70,3 +70,35 @@ meeting = [user1, user2, user3]
 for user in meeting:
   user.say_id()
 
+# Task 3 __ADD__ dunder method works as + operator
+
+class Employee():
+    new_id = 1
+
+    def __init__(self):
+        self.id = Employee.new_id
+        Employee.new_id += 1
+
+
+class Meeting:
+    def __init__(self):
+        self.attendees = []
+
+    def __len__(self):
+        return len(self.attendees)
+
+    def __add__(self, employee):
+        print("ID {} added.".format(employee.id))
+        self.attendees.append(employee)
+
+    # Write your code
+
+
+e1 = Employee()
+e2 = Employee()
+e3 = Employee()
+m1 = Meeting()
+m1 + e1
+m1 + e2
+m1 + e3
+print(len(m1))
