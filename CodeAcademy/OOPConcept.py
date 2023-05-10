@@ -102,3 +102,27 @@ m1 + e1
 m1 + e2
 m1 + e3
 print(len(m1))
+
+# Task 4 Abstraction
+
+from abc import ABC, abstractmethod
+
+class AbstractEmployee(ABC):
+  new_id = 1
+  def __init__(self):
+    self.id = AbstractEmployee.new_id
+    AbstractEmployee.new_id += 1
+
+  @abstractmethod
+  def say_id(self):
+    pass
+
+# Write your code below
+class Employee(AbstractEmployee):
+    def say_id(self):
+      print(f"The id is {self.id}")
+
+e1 = Employee()
+e2 = Employee()
+e1.say_id()
+e2.say_id()
