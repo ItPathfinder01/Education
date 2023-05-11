@@ -126,3 +126,16 @@ e1 = Employee()
 e2 = Employee()
 e1.say_id()
 e2.say_id()
+
+# Task 5 Encapsulation
+
+class Employee():
+    def __init__(self):
+        self.id = None
+        self._id = None
+        self.__id = None     # Name mangling mechanism is applied to this attribute, as a result we will see _Classname__id
+
+e = Employee()
+print(dir(e))                # dir() returns all attributes of the current module or object
+
+
