@@ -170,6 +170,34 @@ print(e1.get_name())
 e2.set_name("Fluffy")
 print(e2.get_name())
 
-e2.del_name()
-print(e2.get_name())
+
+# Task 7
+
+class Geometry:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+class Rectangle_area(Geometry):
+    def rect_calc(self):
+        s = self.x * self.y
+        return f"The rectangle area is {s}."
+
+class Rectangle_perimeter(Geometry):
+    def rect_calc(self):
+        p = (self.x + self.y)*2
+        return f"The rectangle perimeter is {p}."
+
+
+area = Rectangle_area(4,5)
+perim = Rectangle_perimeter(4,5)
+
+measures = [area, perim]
+
+for measure in measures:
+    print(measure.rect_calc())
+
+
+
 
