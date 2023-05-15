@@ -199,5 +199,33 @@ for measure in measures:
     print(measure.rect_calc())
 
 
+# Task 8 school
+
+class School:
+
+    def __init__(self, name, level, numberOfStudents):
+        self.name = name
+        self.level = level
+        self.numberOfStudents = numberOfStudents
+
+    def __repr__(self):
+        return (f"A {self.level} school named {self.name} with {self.numberOfStudents} students")
+
+    def getName(self):
+        return self.name
+
+    def getLevel(self):
+        return self.level
+
+    def getStudents(self, newNumberOfStudents):
+        self.numberOfStudents = newNumberOfStudents
+        return newNumberOfStudents
+
+
+A1 = School("Class A", "primary", 30)
+print(A1)
+
+
+
 
 
