@@ -9,6 +9,11 @@ class Invasion:
         vehicle_info = '\n'.join(f'{vehicle}: {quantity}' for vehicle, quantity in self.weapon.items())
         return f'{self.unit_name} - {self.quantity} of soldiers are available for invasion\nHere are available vehicles:\n{vehicle_info}\nThe commander is {self.commander}.'
 
+class Tactics:
+    def __init__(self, tactic, direction):
+        self.tactic = tactic
+        self.direction = direction
+
 
 cadian_weapon = {
     "Leman russ": 1000, "Chimera": 100000, "Basilisk": "2000", "Hellhound": 5000
