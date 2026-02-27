@@ -1,0 +1,6 @@
+Chicken
+Pork
+Beef
+Turkey
+Pigeon
+Dog

@@ -1,34 +1,15 @@
-print("Welcome to Ichiraku Ramen")
+def clean_menu(filename):
+    file = open(filename)
+    temp = file.readlines()
+    result = []
+    for char in temp:
+        new_item = char.strip()
+        result.append(new_item)
+    return result
 
-bouillon_options = ["shoyu", "shio", "miso"]
-meat_options = ["chicken", "pork", "beef", "turkey"]
-addition_options = ["egg", "mushrooms", "tofu", "vegetables", "bacon", "kimchi"]
-
-print("Ichiraku Ramen bouillons")
-print("------------------")
-i = 1
-for b in bouillon_options:
-    print(i, b)
-    i += 1
-bouillon = input("Choose the bouillon ")
-
-print("Ichiraku Ramen meat options")
-print("------------------")
-i = 1
-for m in meat_options:
-    print(i, m)
-    i += 1
-meat = input("Choose your meat ")
-
-
-print("Ichiraku Ramen additions")
-print("------------------")
-i = 1
-for a in addition_options:
-    print(i, a)
-    i += 1
-addition = input("Choose the additions ")
-
-print(bouillon_options[int(bouillon)-1])
-print(meat_options[int(meat)-1])
-print(addition_options[int(addition)-1])
+bouillons = clean_menu("bouillons_options.txt")
+print(bouillons)
+meat = clean_menu("meat_options.txt")
+print(meat)
+additions = clean_menu("addition_options.txt")
+print(additions)

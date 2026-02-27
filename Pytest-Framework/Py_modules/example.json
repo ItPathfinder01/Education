@@ -1,0 +1,24 @@
+
+{
+  "name": "Alex",
+  "email": "alex1607@gmail.com",
+  "hobby": ["MiniatureGames", "Fishing", "Reading"],
+  "salary": 3000,
+  "married": true,
+  "address": {
+    "country": "Belarus",
+    "city": "Minsk",
+    "phoneNumber": 3456789
+  },
+  "skills": [
+    {
+      "name": "Python",
+      "years": 3
+    },
+    {
+      "occupation": "testing",
+      "level": "Expert",
+      "years": 10
+    }
+  ]
+}

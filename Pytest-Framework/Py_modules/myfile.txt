@@ -1,0 +1,5 @@
+user      city       email
+Andrey    Minsk      andrey1234@gmail.com
+Zach      New York   znichers8888@gmail.com
+Phill     London     pilipl@gmail.com
+Helen     Paris      lenaperhom@gmail.com

@@ -8,24 +8,43 @@ def menu(choices, title="Ichiraku Ramen", prompt="Choice the option "):
 
     while True:
         choice = input(prompt)
-        allowed_answers =[]
+        allowed_answers = []
         for a in range(1, len(choices)+1):
             allowed_answers.append(str(a))
+        allowed_answers.append("x")
+        allowed_answers.append("X")
         if choice in allowed_answers:
-            answer = choices[int(choice) -1]
-            break
+            if choice == "X" or choice == "x":
+                answer = ""
+                break
+            else:
+                answer = choices[int(choice) - 1]
+                break
+
         else:
-            print("Choice 1,2 or 3")
+            print("Enter number from 1 to ", len(choices), "or X if you don't want it")
             answer = " "
     return answer
 
 
-bouillon_options = ["shoyu", "shio", "miso"]
-meat_options = ["chicken", "pork", "beef", "turkey"]
-addition_options = ["egg", "mushrooms", "tofu", "vegetables", "bacon", "kimchi"]
-bouillon = menu(bouillon_options, "Ichiraku Ramen", "Choice the bouillon: ")
-meat = menu(meat_options, "Ichiraku Ramen", "Choice the meat: ")
-addition = menu(addition_options, "Ichiraku Ramen", "Choice the addition: ")
+
+def read_menu(filename):
+    file = open(filename)
+    temp = file.readlines()
+    result = []
+    for char in temp:
+        new_item = char.strip()
+        result.append(new_item)
+    return result
+
+bouillons = read_menu("bouillons_options.txt")
+meats = read_menu("meat_options.txt")
+additions = read_menu("addition_options.txt")
+
+
+bouillon = menu(bouillons, "Ichiraku Ramen", "Choice the bouillon: ")
+meat = menu(meats, "Ichiraku Ramen", "Choice the meat: ")
+addition = menu(additions, "Ichiraku Ramen", "Choice the addition: ")
 
 print("Your order:")
 print("Your bouillon is:", bouillon)

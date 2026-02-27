@@ -6,7 +6,7 @@ import json
 # print(resp2.text)
 
 session = requests.Session()
-session.auth = authentication = ('alexarmy1607@gmail.com', 'env')
+session.auth = authentication = ('alexarmy1607@gmail.com', "")
 user_repos_url = "https://api.github.com/user/repos"
 
 
