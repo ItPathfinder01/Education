@@ -6,6 +6,7 @@ with open("myfile.csv", mode="r") as file:
         print(item)
 
 print("=====================")
+print("=====================")
 
 with open("myfile.csv", mode="r") as file:
     csvFile = csv.DictReader(file)
